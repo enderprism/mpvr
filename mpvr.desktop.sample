@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=mpvr
+Comment=Play all the songs from the music folder in random order
+Exec=mpvr
+Icon=mpv
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Video;Player;TV;

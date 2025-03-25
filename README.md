@@ -13,4 +13,4 @@ Tested with Linux, compatibility with other systems is untested and not guarante
 - Put it somewhere on your `$PATH`.
 
 > [!TIP]
-> You can use the `mpvr.sample.desktop` file to add a desktop entry for mpvr.
+> You can use the `mpvr.desktop.sample` file to add a desktop entry for mpvr.
