@@ -1,6 +1,8 @@
 # mpvr
 An mpv wrapper written in Rust to play music in a single mpv instance.
 
+![](assets/screenshot.png)
+
 Tested with Linux, compatibility with other systems is untested and not guaranteed.
 
 ## Installation

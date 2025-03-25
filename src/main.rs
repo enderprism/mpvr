@@ -13,7 +13,7 @@ const MPVR_SOCKET: &str = "/tmp/mpvr-socket";
 
 #[derive(Parser)]
 #[command(arg_required_else_help(true))]
-/// An mpv wrapper to make music listening easier, with a single mpv instance open.
+/// An mpv wrapper written in Rust to play music in a single mpv instance.
 struct Cli {
     files: Vec<String>,
     #[command(subcommand)]
