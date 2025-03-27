@@ -1,4 +1,5 @@
 use crate::helper;
+use crate::player;
 use mpvipc::*;
 
 /// Add files at the end of the current playlist.
@@ -25,6 +26,6 @@ pub fn queue(mpv: &Mpv, files: &[String], play: &bool) {
     }
     if *play {
         mpv.set_property("pause", false).expect("Failed to resume");
-        mpv.next().expect("Failed to play next track")
+        player::next(mpv);
     }
 }
