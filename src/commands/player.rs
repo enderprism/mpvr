@@ -1,7 +1,8 @@
 use mpvipc::Mpv;
 
 pub fn pause(mpv: &Mpv) {
-    mpv.pause().unwrap();
+    let pause_status: bool = mpv.get_property("pause").unwrap();
+    mpv.set_property("pause", !pause_status).unwrap();
 }
 
 pub fn next(mpv: &Mpv) {
