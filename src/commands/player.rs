@@ -42,5 +42,5 @@ pub fn decrease_volume(mpv: &Mpv, volume: f64) {
 
 pub fn get_volume(mpv: &Mpv) {
     let volume: f64 = mpv.get_property("volume").unwrap();
-    print!("{}", volume);
+    print!("{volume}");
 }

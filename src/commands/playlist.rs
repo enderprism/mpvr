@@ -12,7 +12,7 @@ pub fn append(mpv: &Mpv, files: &[String]) {
             PlaylistAddOptions::Append,
         )
         .unwrap();
-        println!("Added {:?}", file);
+        println!("Added {file}");
     }
 }
 
@@ -22,7 +22,7 @@ pub fn queue(mpv: &Mpv, files: &[String], play: &bool) {
         let path = helper::abspath(file);
         mpv.run_command_raw("loadfile", &[path.as_str(), "insert-next"])
             .unwrap();
-        println!("Added {:?}", file);
+        println!("Added {file}");
     }
     if *play {
         mpv.set_property("pause", false).expect("Failed to resume");

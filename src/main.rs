@@ -56,13 +56,9 @@ enum VolumeCommands {
 fn start_mpv() -> std::process::Child {
     Command::new("sh")
         .arg("-c")
-        .arg(
-            format!(
-                "mpv --profile=mpvr --idle --input-ipc-server={} & disown",
-                MPVR_SOCKET
-            )
-            .as_str(),
-        )
+        .arg(format!(
+            "mpv --profile=mpvr --idle --input-ipc-server={MPVR_SOCKET} & disown",
+        ))
         .stdin(Stdio::null())
         .stdout(Stdio::null())
         .spawn()
