@@ -94,7 +94,7 @@ fn main() {
             },
         },
         None => {
-            mpv.set_property("shuffle", true).unwrap();
+            mpv.set_property("shuffle", !&cli.ordered).unwrap();
             playlist::queue(&mpv, &cli.files, &true);
         }
     }
