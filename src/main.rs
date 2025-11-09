@@ -77,7 +77,7 @@ fn main() {
         Some(command) => match command {
             Commands::Queue { files, play } => {
                 mpv.set_property("shuffle", !&cli.ordered).unwrap();
-                playlist::queue(&mpv, files, play);
+                playlist::queue(&mpv, files, *play);
             }
             Commands::Append { files } => {
                 mpv.set_property("shuffle", !&cli.ordered).unwrap();
@@ -95,7 +95,7 @@ fn main() {
         },
         None => {
             mpv.set_property("shuffle", !&cli.ordered).unwrap();
-            playlist::queue(&mpv, &cli.files, &true);
+            playlist::queue(&mpv, &cli.files, true);
         }
     }
 }
